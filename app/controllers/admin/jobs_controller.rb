@@ -32,6 +32,7 @@ class Admin::JobsController < ApplicationController
       redirect_to admin_jobs_path
     else
       render :edit
+    end
   end
 
   def destry
