@@ -2,7 +2,7 @@ class Admin::JobsController < ApplicationController
   before_filter :authenticate_user!, only: [:new, :create, :update, :edit, :destroy]
 
   def show
-    @jobs = Job.find(params[:id])
+    @job = Job.find(params[:id])
   end
 
   def index
@@ -35,7 +35,7 @@ class Admin::JobsController < ApplicationController
     end
   end
 
-  def destry
+  def destroy
     @job = Job.find(params[:id])
     @job.destroy
     redirect_to admin_jobs_path
