@@ -1,4 +1,6 @@
 class JobsController < ApplicationController
+  before_filter :authenticate_user!, only: [:new, :create, :update, :edit, :destroy]
+
   def show
     @job = Job.find(params[:id])
   end
@@ -38,7 +40,7 @@ class JobsController < ApplicationController
     def destroy
       @job = Job.find(params[:id])
       @job.destroy
-      
+
       redirect_to jobs_path
     end
   end
