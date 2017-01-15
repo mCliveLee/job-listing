@@ -37,6 +37,8 @@ gem 'devise'
 
 gem 'font-awesome-rails'
 # Icons
+gem 'carrierwave'
+# Upload functon
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
